@@ -1,0 +1,205 @@
+  
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="ISO-8859-1">
+            <title>Prueba de "conceto"</title>
+    </head>
+    <body>
+        <canvas height="350px" width="1900px" id="micanvas"></canvas>
+        <script>
+            var canvas = document.getElementById("micanvas");
+            var ctx = canvas.getContext("2d");
+            var img = new Image();
+            img.src = "SQCDP.jpg" 
+            img.width=20;
+            var valoresParaEse = new Array("OK", "N/A", "KO", "KO", "OK", "N/A", "N/A", "KO", "OK", "KO", "OK", "KO", "N/A", "N/A", "OK", "KO", "OK", "KO", "OK", "N/A", "N/A", "KO", "OK", "KO", "OK", "KO", "OK", "KO", "OK", "KO", "NO")
+
+            img.onload = function (){
+	        ctx.drawImage(img, 0, 0);
+
+            for (i = 0; i < valoresParaEse.length; i++) {
+             
+                ese(valoresParaEse[i], i )
+                
+                }
+
+            }
+
+
+            function ese(valorParaCadaDiaDeEse, dia){
+                dia ++;
+                switch(valorParaCadaDiaDeEse){
+                    case "OK":
+                    ctx.fillStyle = "#4DB6AC";
+                    break;
+                    case "KO":
+                    ctx.fillStyle = "#EC7063";
+                    break;
+                    case "N/A":
+                    ctx.fillStyle = "#C0C0C0";
+                    break;
+                    case "NO":
+                    ctx.fillStyle = "#FFFFFF";
+                    break;
+
+                }
+                ctx.beginPath();
+                eseCoordenadas(dia);
+            }
+
+
+
+            function eseCoordenadas(dia){
+                switch(dia){
+                
+                    case 1:
+    
+                        ctx.moveTo(45, 255);
+                        ctx.lineTo(71, 255);
+                        ctx.lineTo(71, 335);
+                        ctx.lineTo(45, 335);
+                        ctx.fill();
+                        ctx.fillStyle = "#000000";   
+                        ctx.font = "bold 12px sans-serif";
+                        ctx.fillText(dia,55,295);
+
+                        break;
+
+                    case 2:
+    
+                        ctx.moveTo(72, 255);
+                        ctx.lineTo(97, 255);
+                        ctx.lineTo(97, 335);
+                        ctx.lineTo(72, 335);
+                        ctx.fill();
+                        ctx.fillStyle = "#000000";   
+                        ctx.font = "bold 12px sans-serif";
+                        ctx.fillText(dia,82,295);
+    
+                        break;
+
+                    case 3:
+
+                        ctx.moveTo(98, 255);
+                        ctx.lineTo(123, 255);
+                        ctx.lineTo(123, 335);
+                        ctx.lineTo(98, 335);
+                        ctx.fill();
+                        ctx.fillStyle = "#000000";   
+                        ctx.font = "bold 12px sans-serif";
+                        ctx.fillText(dia,107,295);
+                        
+                        break;
+
+                    case 4:
+                        break;
+
+                    case 5:
+                        break;
+
+                    case 6:
+                        break;
+
+                    case 7:
+                        break;
+
+                    case 8:
+                        break;
+
+                    case 9:
+                        break;
+
+                    case 10:
+                        break;
+
+                    case 11:
+                        break;
+
+                    case 12:
+                        break;
+
+                    case 13:
+                        break;
+
+                    case 14:
+                        break;
+
+                    case 15:
+                        break;
+
+                    case 16:
+                        break;
+
+                    case 17:
+                        break;
+
+                    case 18:
+                        break;
+
+                    case 19:
+                        break;
+
+                    case 20:
+                        break;
+
+                    case 21:
+                        break;
+
+                    case 22:
+                        break;
+
+                    case 23:
+                        ctx.moveTo(70, 33);
+                        ctx.lineTo(71, 32);
+                        ctx.lineTo(72, 32);
+                        ctx.lineTo(73, 31);
+                        ctx.lineTo(74, 31);
+                        ctx.lineTo(78, 28);
+                        ctx.lineTo(82, 27);
+                        ctx.lineTo(86, 25);
+                        ctx.lineTo(89, 24);
+                        ctx.lineTo(92, 23);
+                        ctx.lineTo(98, 22);
+                        ctx.lineTo(105, 20);
+                        ctx.lineTo(121, 19);
+                        ctx.lineTo(121, 19);
+                        ctx.lineTo(121, 99);
+                        ctx.lineTo(109, 101);
+                        ctx.fill();
+                        ctx.fillStyle = "#000000";   
+                        ctx.font = "bold 11px sans-serif";
+                        ctx.fillText(dia,95,60);
+                        break;
+                    case 24:
+                        break;
+                    case 25:
+                        break;
+                    case 26:
+                        break;
+                    case 27:
+                        break;
+                    case 28:
+                        break;
+                    case 29:
+                        break;
+                    case 30:
+                        break;
+                    case 31:
+                        ctx.moveTo(308, 19);
+                        ctx.lineTo(335, 19);
+                        ctx.lineTo(335, 99);
+                        ctx.lineTo(308, 99);
+                        ctx.fill();
+                        ctx.fillStyle = "#FFFFFF";   
+                        ctx.font = "bold 11px sans-serif";
+                        ctx.fillText(dia,312,57);
+                        break;
+
+                }
+
+            }
+
+        </script>
+    </body>
+</html>
